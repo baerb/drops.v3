@@ -1,0 +1,143 @@
+<!doctype html>
+<html ng-app="clickingGame">
+  <head>
+    <title>Water Drops</title>
+    <meta c harset="utf-8">
+    <link href="libs/bootstrap-3.3.0-dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+
+    <style>
+      .label-lg {
+        font-family:cambria; 
+      }
+      #canvas {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -user-select: none;
+
+        cursor: pointer;
+        border-top: 14px solid #5A4E40; 
+        border-left: 10px solid #5A4E40;
+        border-right: 10px solid #5A4E40;
+        border-bottom: 14px solid #5A4E40;
+
+      }
+      .btn-wrapper {
+        display: inline-block;
+        font-family:cambria; 
+      }
+
+
+      .icon-blue {
+        color: #34849C;
+      }
+      .icon-brown {
+        color: #5A4E40;
+      }
+      html, body {
+        height: 100%;
+        background-color: #E5EAEB;
+        display: inline-block;
+        width: 100%;
+
+      }
+           
+} 
+
+
+    </style>
+
+    </style>
+    <link rel="icon" type="image/png" href="tint_1.png" />
+  </head>
+
+  <body ng-controller="RootCtrl">
+
+
+    <br>
+    <h1 class="container"><center> 
+        &nbsp;
+      <span class="glyphicon glyphicon-tint icon-blue">&nbsp;   </center>
+    </h1>
+  
+    <div class="container">
+      <div class="alert alert-info" ng-if="drops > 10000100000000000 ">
+       </div>
+
+      <div class="progress">
+        <div class="progress-bar" ng-style="{width: drops/goal*100 + '%', 'background-color':'#34849C'}"></div>
+      </div>
+
+
+
+
+     
+      <div ng-repeat="clicker in autoclickers.concat(miscupgrades) | notRemoved | orderBy:'price'" class="btn-wrapper" >
+        
+      <button class="btn btn-default" ng-disabled="clicker.price > drops" ng-click="buyClicker(clicker)"  id='futton' onclick="go();">
+          {{clicker.text}} <i class="glyphicon glyphicon-tint | icon-brown"> </i>  <b>{{clicker.price}}</b>
+        </button>
+
+      </div>
+    </div>
+
+
+
+    <input type="hidden" id='foal' name='fool' value="" >
+ 
+ 
+<div class="container">
+      <div class="alert alert-info" ng-if="drops > 10000010000000000 ">
+       </div>
+
+
+    <div class="container">
+    <div style="color:#34849C"; font-family:"Cambria"; ng-if="drops < 1"; align="center">
+        <h5>Click anywhere in the rectangle</h5>
+    </div> 
+    </div>
+  
+    <canvas width="1000" height="700" id="canvas" ng-click="canvasClick($event)" ng-mousemove="canvasMove($event)" unselectable="on"></canvas>
+
+
+  
+
+    <div class="drops hide">
+      <img ng-repeat="file in dropImgFiles" ng-src="{{file}}" class="drop">
+    </div>
+
+
+     
+
+
+ 
+     
+ 
+
+
+    <center><iframe src="https://docs.google.com/forms/d/1gn-QrWuC-mfbGMQgNuh9baKkI6CnEWV-ObTQq8YPXV4/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe></center>
+ 
+
+
+ 
+
+
+
+    <script src="libs/rAF.js"></script>
+    <script src="libs/lodash-2.4.1.min.js"></script>
+    <script src="libs/jquery-2.1.1.min.js"></script>
+    <script src="libs/angular-1.2.26.min.js"></script>
+    <script src="libs/ui-bootstrap-tpls-0.11.2.min.js"></script>
+    <script src="libs/Context2DWrapper-1.0.min.js"></script>
+    <script src="controller.js"></script>
+    <script src="libs/jquery-1.10.2.min.js"></script>
+    <script src="libs/ion.sound.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/0.9.0/angularfire.min.js"></script>
+
+ 
+ 
