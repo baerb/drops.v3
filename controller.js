@@ -197,8 +197,8 @@ $scope.autoclickers.push({
     price: 13000,
     buy: function(clicker) {
       $scope.userClick++;
-      $scope.goal = 27000;
-      document.getElementById('foal').value = 27000;
+      $scope.goal = 30000;
+      document.getElementById('foal').value = 30000;
       return clicker.removed = true;
     },
     upgrade: function(clicker) {
@@ -226,11 +226,11 @@ $scope.autoclickers.push({
     bought: 0,
     has: 0,
     every: 10,
-    price: 27000,
+    price: 30000,
     buy: function(clicker) {
       $scope.userClick++;
-      $scope.goal = 40000;
-      document.getElementById('foal').value = 40000;
+      $scope.goal = 50000;
+      document.getElementById('foal').value = 50000;
       return clicker.removed = true;
     },
     upgrade: function(clicker) {
@@ -258,11 +258,11 @@ $scope.autoclickers.push({
     bought: 0,
     has: 0,
     every: 4,
-    price: 40000,
+    price: 50000,
     buy: function(clicker) {
       $scope.userClick++;
-      $scope.goal = 70000;
-      document.getElementById('foal').value = 70000;
+      $scope.goal = 100000;
+      document.getElementById('foal').value = 100000;
       return clicker.removed = true;
     },
     upgrade: function(clicker) {
@@ -289,7 +289,7 @@ $scope.autoclickers.push({
     bought: 0,
     has: 0,
     every: 1,
-    price: 70000,
+    price: 100000,
     buy: function(clicker) {
       $scope.userClick++;
       $scope.goal = 1000000;
@@ -553,11 +553,11 @@ _.mixin({
            ref.push("OpenRoof");         }
            else  if ((document.getElementById('foal').value  == 13000   )) {
            ref.push("Stratus");         }
-           else  if ((document.getElementById('foal').value ==  27000   )) {
+           else  if ((document.getElementById('foal').value ==  30000   )) {
            ref.push("Altocumulus");         }
-           else  if ((document.getElementById('foal').value == 40000   )) {
+           else  if ((document.getElementById('foal').value == 50000   )) {
            ref.push("Cumulus");         }
-           else  if ((document.getElementById('foal').value == 70000   )) {
+           else  if ((document.getElementById('foal').value == 100000   )) {
            ref.push("Cumulonimbus");         }
            else  if ((document.getElementById('foal').value == 1000000   )) {
            ref.push("Nimbostratus");         }
